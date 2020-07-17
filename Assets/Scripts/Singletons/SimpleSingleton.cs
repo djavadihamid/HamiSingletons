@@ -1,18 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
-public class SimpleSingleton : MonoBehaviour
+namespace Modules.Singleton
 {
-    // Start is called before the first frame update
-    void Start()
+    public abstract class SimpleSingleton<T> where T : class, new()
     {
-        
-    }
+        private static Lazy<T> _ins = new Lazy<T>(() => new T());
+        public static T Ins => _ins.Value;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected SimpleSingleton()
+        {
+            Init();
+        }
+
+        protected virtual void Init()
+        {
+        }
+
+        protected void ResetInstance()
+        {
+            _ins = new Lazy<T>(() => new T());
+        }
     }
 }
