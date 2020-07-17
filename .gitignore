@@ -1,0 +1,7 @@
+*
+!*/
+!/Assets/Scripts/Singletons/**
+*/Assets/Scripts/Singletons/**.meta
+*.cs.meta
+!*.gitignore
+
