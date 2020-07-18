@@ -18,7 +18,7 @@ public abstract class SingletonPersistentFromResource<T> : MonoBehaviour where T
         }
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
