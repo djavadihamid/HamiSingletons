@@ -6,7 +6,7 @@ public abstract class SingletonPersistentExistingMono<T> : MonoBehaviour where T
 
     public static T Ins => _ins;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         if (_ins == null)
         {

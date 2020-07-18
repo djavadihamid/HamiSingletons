@@ -6,7 +6,7 @@ public abstract class SingletonPersistentNewGameobject<T> : MonoBehaviour where 
     private static Lazy<T> _ins = new Lazy<T>(() => { return new GameObject(typeof(T).Name).AddComponent<T>(); });
     public static T Ins => _ins.Value;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
