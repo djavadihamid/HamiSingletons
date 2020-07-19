@@ -6,12 +6,20 @@ Package should be used in Unity but the concepts in it can bee used in any other
 ## Installation
 Use this repository as submodele of your project git repository
 ```gitexclude
-git submodule add URL PATH_TO_CLONE
+via https:
+git submodule add https://github.com/djavadihamid/HamiSingletons.git PATH_TO_CLONE
+
+or via SSH:
+git submodule add git@github.com:djavadihamid/HamiSingletons.git PATH_TO_CLONE
 ```
 
 or if you want to work on this repository just clone the repository and voila.
 ```gitexclude
-git clone URL
+Via https:
+git clone https://github.com/djavadihamid/HamiSingletons.git
+
+Or via SSH:
+git clone git@github.com:djavadihamid/HamiSingletons.git
 ```
 ## Usage
 
