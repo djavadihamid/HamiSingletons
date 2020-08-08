@@ -1,0 +1,3 @@
+[submodule "Assets/Modules/HamiParents"]
+	path = Assets/Modules/HamiParents
+	url = https://github.com/djavadihamid/HamiParents.git

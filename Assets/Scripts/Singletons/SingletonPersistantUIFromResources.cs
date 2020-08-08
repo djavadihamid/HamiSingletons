@@ -1,5 +1,4 @@
-﻿using Modules.UI.Canvas;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class SingletonPersistantUIFromResources<T> : MonoBehaviour where T : MonoBehaviour
 {
