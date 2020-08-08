@@ -1,24 +1,21 @@
 ﻿using System;
 
-namespace Modules.Singleton
+public class EditorSingleton<T> : UnityEditor.Editor where T : class, new()
 {
-    public class EditorSingleton<T> : UnityEditor.Editor where T : class, new()
+    private static Lazy<T> _ins = new Lazy<T>(() => new T());
+    public static T Ins => _ins.Value;
+
+    protected EditorSingleton()
     {
-        private static Lazy<T> _ins = new Lazy<T>(() => new T());
-        public static T Ins => _ins.Value;
+        Init();
+    }
 
-        protected EditorSingleton()
-        {
-            Init();
-        }
+    protected virtual void Init()
+    {
+    }
 
-        protected virtual void Init()
-        {
-        }
-
-        protected void ResetInstance()
-        {
-            _ins = new Lazy<T>(() => new T());
-        }
+    protected void ResetInstance()
+    {
+        _ins = new Lazy<T>(() => new T());
     }
 }
